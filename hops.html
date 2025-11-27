@@ -28,12 +28,482 @@
 </nav>
 <main>
     <div class="container">
-        <h2>Opintoni / HOPS</h2>
-        <p>Täältä näet henkilökohtaisen opintosuunnitelmasi (HOPS), kurssit ja opintopisteet.</p>
+        <h2>Individual Student Plan</h2>
+        <p>Plan and schedule your studies and edit your individual study plan (ISP) together with your tutor teacher</p>
     </div>
 </main>
+<div class="container">
+
+<table class="student-info-table">
+    <tr>
+        <td class="left">
+            <h2>First name Last name</h2>
+            <h3>PTIVIS23 – Software Engineering and Project Management</h3>
+
+            <p>
+                <strong>Student number:</strong> 12345678<br>
+                <strong>OID:</strong> 1.2.333.444.42.1234567889
+            </p>
+
+            <p>
+                <strong>Entitlement:</strong> BEng (Poly), IT<br>
+                <strong>Validity:</strong> 29.08.2023 – 31.07.2027
+            </p>
+        </td>
+
+        <td class="right">
+            <p><strong>Total ECTS:</strong> 130</p>
+            <p><strong>Draft ISP:</strong> 233 / 240 ECTS selected</p>
+            <p><strong>Grade average:</strong> 3</p>
+
+            <hr>
+
+            <p><strong>Latest notifications (RPL):</strong></p>
+            <ul>
+                <li>1234567_05.09.2025_1 – Received 05.09.2025 11:58</li>
+                <li>1234567_01.06.2025_1 – Received 02.06.2025 15:19</li>
+                <li>1234567_29.05.2025_1 – Received 29.05.2025 15:17</li>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="left">
+            <strong>Student group(s):</strong>
+            <ul>
+                <li>PTIVIS23</li>
+                <li>PTIVIS23E</li>
+                <li>PTIVIS23O</li>
+            </ul>
+        </td>
+
+        <td class="right">
+            <p><strong>Ongoing enrollments:</strong> 3</p>
+            <p><strong>Enrollments waiting approval:</strong> 2</p>
+            <p><strong>Enrollments accepted:</strong> 3</p>
+            <p><strong>Latest completed studies:</strong> 30</p>
+
+            <hr>
+
+            <p><strong>Recent courses:</strong></p>
+            <ul>
+                <li>Back-End Development</li>
+                <li>Full Stack Web Development</li>
+                <li>Cybersecurity D</li>
+                <li>Unix/Linux (Basics and Advanced)</li>
+                <li>Object-Oriented Programming</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+    <div id="page-container"></div>
+
+    <button id="prev-btn">Previous Page</button>
+    <button id="next-btn">Next Page</button>
+
+</div>
+
+
 <footer>
     <p>&copy; 2025 TurkuAMK – Pakki (Remake)</p>
 </footer>
+
+
+
+<script>
+
+const pages = [ `<div id="your_Courses">
+            <h3>Year 1 - Credits: 74 etcs</h3>
+            <li>Autumn 2023 - Credits: 30 etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teacher(s)</div>
+                <div>Group(s)</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Engineering Physics</div>
+                <div>Jaakko Lamminpää, Antti Haarto</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>2</div>
+            </div>
+            <div class="table-header">
+                <div>Measurements in Physics</div>
+                <div>Jaakko Lamminpää, Antti Haarto</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>4</div>
+            </div>
+            <div class="table-header">
+                <div>Engineering Precalculus</div>
+                <div>Jetro Vesti</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>4</div>
+            </div>
+            <div class="table-header">
+                <div>Project Hatchery</div>
+                <div>Elina Asukas, Arto Huhta, Annamari Heikkilä, Janne Granfors, Alisa Pettersson, Mervi Vuolas, Meiju Keinänen</div>
+                <div>aivan vitusti</div>
+                <div>5 etcs</div>
+                <div>3</div>
+            </div>
+            <div class="table-header">
+                <div>Introduction to Programming</div>
+                <div>Tommi Tuomola</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>3</div>
+            </div>
+            <div class="table-header">
+                <div>Finnish Language and Communication</div>
+                <div>Noora Hämäläinen, Leena Mattila</div>
+                <div>PTIVIS23E</div>
+                <div>5 etcs</div>
+                <div>2</div>
+            </div>
+            <li>Spring 2024 - Credits: 44 etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Calculus</div>
+                <div>Jetro Vesti</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>3</div>
+            </div>
+            <div class="table-header">
+                <div>English Professional Skills, B2</div>
+                <div>Ian Bowie</div>
+                <div>PTIVIS23D PTIVIS23D PTIVIS23E PTIVIS23F PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>5</div>
+            </div>
+            <div class="table-header">
+                <div>Basics of Git</div>
+                <div>Anne Jumppanen, Juha Saarinen, Sanna Määttä, Annukka Kinnari, Noora Maritta Nieminen, Tommi Tuomola</div>
+                <div>PTIVIS22 PINFOS22 PIOTK22 PTIETS22 PINFOK23 PINFOS23 PTIVIS23 PTIETS23</div>
+                <div>1 etcs</div>
+                <div>Approved</div>
+            </div>
+            <div class="table-header">
+                <div>Product Development</div>
+                <div>Juha Saarinen, Mauri Suhonen, Noora Maritta Nieminen, Jetro Vesti, Leena Mattila, Paula Steinby, Antti Haarto</div>
+                <div>PTIVIS23A PTIVIS23B PTIVIS23C PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>7 etcs</div>
+                <div>4</div>
+            </div>
+            <div class="table-header">
+                <div>Introduction to Competence Tracks</div>
+                <div>Anne Jumppanen, Tero Jokela, Matti Kuikka, Jani Ekqvist, Teppo Saarenpää, Annukka Kinnari, Jarno Tuominen, Jari-Pekka Paalassalo, Paula Steinby,Taisto Suominen</div>
+                <div>PTIVIS23E</div>
+                <div>3 etcs</div>
+                <div>Approved</div>
+            </div>
+            <div class="table-header">
+                <div>Introduction to Electronics</div>
+                <div>Ville Huhtinen, Jussi Hurri</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>4</div>
+            </div>
+            <div class="table-header">
+                <div>Internet Networks and Security</div>
+                <div>Mika Koivunen, Jari-Pekka Paalassalo</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>5 etcs</div>
+                <div>5</div>
+            </div>
+            <div class="table-header">
+                <div>MATLAB Basics for ICT</div>
+                <div>Jetro Vesti</div>
+                <div>PTIVIS23A PTIVIS23B PTIVIS23C PTIVIS23D  PTIVIS23E PTIVIS23F PINFOS23A PINFOS23B PINFOS23C PINFOK24C</div>
+                <div>3 etcs</div>
+                <div>Approved</div>
+            </div>
+            <div class="table-header">
+                <div>Basic Practice</div>
+                <div>Anne Jumppanen, Mauri Suhonen, Tapio Santavuori</div>
+                <div>PTIVIS23D PTIVIS23E PTIVIS23F</div>
+                <div>10 etcs</div>
+                <div>Approved</div>
+            </div>`, `
+            <div id="your_Courses">
+            <h3>Year 2 - Credits: 60 etcs</h3>
+            <li>Autumn 2024 - Credits: 28 etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teacher(s)</div>
+                <div>Group(s)</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <li>Spring 2025 - Credits: 32 etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            `, `<div id="your_Courses">
+            <h3>Year 3 - Credits: X etcs</h3>
+            <li>Autumn 2025 - Credits: X etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teacher(s)</div>
+                <div>Group(s)</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <li>Spring 2026 - Credits: X etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>`,
+         `<div id="your_Courses">
+            <h3>Year 4 - Credits: X etcs</h3>
+            <li>Autumn 2026 - Credits: X etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teacher(s)</div>
+                <div>Group(s)</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <li>Spring 2027 - Credits: X etcs</li>
+            <br>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>
+            <div class="table-header">
+                <div>Course name</div>
+                <div>Teachers name</div>
+                <div>Intended study group</div>
+                <div>Points</div>
+                <div>Grade</div>
+            </div>`
+        ];
+let currentPage = 0;
+const container = document.getElementById("page-container");
+
+function renderPage() {
+  container.innerHTML = pages[currentPage];
+}
+
+document.getElementById("next-btn").onclick = () => {
+  if (currentPage < pages.length - 1) {
+    currentPage++;
+    renderPage();
+  }
+};
+
+document.getElementById("prev-btn").onclick = () => {
+  if (currentPage > 0) {
+    currentPage--;
+    renderPage();
+  }
+};
+
+renderPage();
+</script>
+
 </body>
 </html>
