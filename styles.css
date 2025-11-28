@@ -181,3 +181,102 @@ footer {
     border-top: 1px solid #ccc;
     margin: 10px 0;
 }
+
+
+.full-width-row {
+    width: 100%;                          /* ← fills the container */
+    display: grid;
+    grid-template-columns: 70% 30%;       /* ← text 70%, button 30% */
+    align-items: center;
+    border: 1px solid #000;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;               /* ← prevents overflow */
+}
+
+.full-width-row .left-text {
+    display: flex;
+    align-items: center;
+}
+
+.full-width-row .right-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.dropdown {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f4f4f4;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .arrow {
+    transform: rotate(90deg);
+}
+
+.dropdown-content {
+    display: none;
+    padding: 12px 16px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.dropdown.open .dropdown-content {
+    display: block;
+}
+
+/* Filter section */
+.filter-section {
+    margin-bottom: 12px;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Filter tokens / buttons */
+.filter-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* selected look */
+.filter-item.selected {
+    background: #003366;
+    color: white;
+    border-color: #003366;
+}
